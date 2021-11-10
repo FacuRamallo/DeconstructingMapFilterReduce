@@ -3,7 +3,7 @@ import {items} from "./main.js"
 //map es un metodo dericado de "reduce"
 //El método map() crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos.
 
-export const map_ = (items, func) => {
+export const deconstructMap = (items, func) => {
     //                    |
     //        function to modify value
       const initialValue = []

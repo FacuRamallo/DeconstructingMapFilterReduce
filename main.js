@@ -1,5 +1,6 @@
 import { deconstructedReduce, deconstructedReduceRefactor1, deconstructedReduceRefactor2} from "./deconstructingReduce.js";
-import { map_, double } from "./deconstructingMap.js";
+import { deconstructMap, double } from "./deconstructingMap.js";
+import { isEven, deconstructFilter } from "./deconstructingFilter.js";
 
 //////////////////Reduce//////////////////////
 export const items = [ 1, 2, 3, 4 ]
@@ -27,7 +28,9 @@ console.log("suma de los elementos del array items = "+deconstructedReduceRefact
 
 
 //////////////MAP////////////////////
-    console.log("Map_ retorna: "+ map_(items, double))
-    console.log("el metodo map aplicado a items retorna: "+ items.map(double))
+console.log("deconstructMap retorna: "+ deconstructMap(items, double))
+console.log("el metodo map aplicado a items retorna: "+ items.map(double))
 
 //////////////FILTER//////////////////
+console.log("deconstructFilter retorna: "+ deconstructFilter(items, isEven))
+console.log("el metodo map aplicado a items retorna: "+ items.filter(isEven))

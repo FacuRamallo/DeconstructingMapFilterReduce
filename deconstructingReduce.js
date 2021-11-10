@@ -52,6 +52,8 @@ return acc
 }
 
 ////////////////////SI declaramos initialValue como un objeto///////////////
+
+//al trabajar con objetos debemos modificar la funcion reducer de la siguiente manera
 export const reducer2 = (acc, cur) => {
     acc[cur] = cur * 2
     return acc

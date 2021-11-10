@@ -20,4 +20,4 @@ export const deconstructFilter = (items, predicate) => {
 
 }
     
-export const isEven = x => x % 2 === 0
+export const isEven = x => x % 2 === 0  

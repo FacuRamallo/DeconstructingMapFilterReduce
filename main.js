@@ -15,23 +15,20 @@ items.reduce(reducer, initialValue) //=> 10
 
 
 
-//console.log("Resultado de ejecutar reduce a item = "+items.reduce(reducer, initialValue));
+console.log("Resultado de ejecutar reduce a item = "+items.reduce(reducer, initialValue));
 
-//console.log("suma de los elementos del array items = "+deconstructedReduce(items));
+console.log("suma de los elementos del array items = "+deconstructedReduce(items));
 
-//console.log("suma de los elementos del array items = "+deconstructedReduceRefactor1(items, reducer));
+console.log("suma de los elementos del array items = "+deconstructedReduceRefactor1(items, reducer));
 
-//console.log("multiplica por 2 a cada elemento del array dado como input = "+deconstructedReduce1(items, reducer1));
+console.log("multiplica por 2 a cada elemento del array dado como input = "+deconstructedReduce1(items, reducer1));
 
-//console.log(deconstructedReduce2(items, reducer2));
-
-//console.log("suma de los elementos del array items = "+ reduce(items, reducer, initialValue));
-
+console.log(deconstructedReduce2(items, reducer2));
 
 //////////////MAP////////////////////
-//console.log("deconstructMap retorna: "+ deconstructMap(items, double))
-//console.log("el metodo map aplicado a items retorna: "+ items.map(double))
+console.log("deconstructMap() retorna: "+ deconstructMap(items, double))
+console.log("el metodo map() aplicado a items retorna: "+ items.map(double))
 
 //////////////FILTER//////////////////
-//console.log("deconstructFilter retorna un array: "+ deconstructFilter(items, isEven))
-//console.log("el metodo map aplicado a items retorna: "+ items.filter(isEven))
+console.log("deconstructFilter() retorna un array: "+ deconstructFilter(items, isEven))
+console.log("el metodo Filter() aplicado a items retorna: "+ items.filter(isEven))

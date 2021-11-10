@@ -1,4 +1,4 @@
-import  {reducer} from "./main.js";
+
 //REDUCE es un metodo de la clase array
 //el motodo "reduce" en código sería:
 
@@ -20,6 +20,7 @@ export function deconstructedReduce(items)
     return acc;
 }
 
+////////////////////REORDENANDO///////////////////////////
 export function deconstructedReduceRefactor1(items, reducer)
 {
     let acc = 0;
@@ -31,8 +32,47 @@ export function deconstructedReduceRefactor1(items, reducer)
     return acc;
 }
 
+////////////////////SI declaramos initialValue como un array///////////////
+export const reducer1 = (acc, cur) => {
+    acc.push(cur * 2)
+    return acc
+  /*         \
+     The reducer must always return the accumulator
+  */       
+  }
+ 
+export function deconstructedReduce1(items, reducer) {
+let acc = []
 
-export function deconstructedReduceRefactor2(items, reducer, initialValue ) 
+for (let i = 0; i < items.length; i++) {
+const cur = items[i]
+acc = reducer(acc, cur)
+}
+return acc
+}
+
+////////////////////SI declaramos initialValue como un objeto///////////////
+export const reducer2 = (acc, cur) => {
+    acc[cur] = cur * 2
+    return acc
+  /*         \
+     The reducer must always return the accumulator
+  */       
+  } 
+
+export function deconstructedReduce2(items, reducer) {
+let acc = {}
+
+for (let i = 0; i < items.length; i++) {
+const cur = items[i]
+acc = reducer(acc, cur)
+}
+return acc;
+}
+
+//Por lo tanto como el for loop es siempre igual podemos extraerlo a una función
+
+export function reduce(items, reducer, initialValue ) 
 {
     let acc = initialValue;
     for (let i = 0; i < items.length; i++) 

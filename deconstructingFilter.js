@@ -1,4 +1,6 @@
+import { reduce } from "./deconstructingReduce.js"
 
+//El método filter() crea un nuevo array con todos los elementos que cumplan la condición implementada por la función dada.
 
 
 export const deconstructFilter = (items, predicate) => {
@@ -13,14 +15,7 @@ export const deconstructFilter = (items, predicate) => {
         }
         return acc
     }
-    const reduce = (items, reducer, initialValue)=> {
-        let acc = initialValue
-        for (let i = 0; i < items.length; i++) {
-        const cur = items[i]
-        acc = reducer(acc, cur);
-        }
-        return acc
-    }
+    
     return reduce(items,reducer,initialValue)
 
 }

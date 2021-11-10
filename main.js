@@ -1,4 +1,4 @@
-import { deconstructedReduce, deconstructedReduceRefactor1, deconstructedReduceRefactor2} from "./deconstructingReduce.js";
+import { deconstructedReduce, deconstructedReduce1, deconstructedReduce2, deconstructedReduceRefactor1, reducer1, reducer2, reduce} from "./deconstructingReduce.js";
 import { deconstructMap, double } from "./deconstructingMap.js";
 import { isEven, deconstructFilter } from "./deconstructingFilter.js";
 
@@ -12,25 +12,26 @@ items.reduce(reducer, initialValue) //=> 10
         method    \
                 reducer
 */
-//los parametros de la función reducer se abrevian como "acc" y "cur"
-//reducer = (acc, cur) => acc + cur;
 
 
-console.log("Resultado de ejecutar reduce a item = "+items.reduce(reducer, initialValue));
 
-console.log("suma de los elementos del array items = "+deconstructedReduce(items));
+//console.log("Resultado de ejecutar reduce a item = "+items.reduce(reducer, initialValue));
 
-let funcion = reducer
+//console.log("suma de los elementos del array items = "+deconstructedReduce(items));
 
-console.log("suma de los elementos del array items = "+deconstructedReduceRefactor1(items, funcion));
+//console.log("suma de los elementos del array items = "+deconstructedReduceRefactor1(items, reducer));
 
-console.log("suma de los elementos del array items = "+deconstructedReduceRefactor2(items, funcion, initialValue));
+//console.log("multiplica por 2 a cada elemento del array dado como input = "+deconstructedReduce1(items, reducer1));
+
+//console.log(deconstructedReduce2(items, reducer2));
+
+//console.log("suma de los elementos del array items = "+ reduce(items, reducer, initialValue));
 
 
 //////////////MAP////////////////////
-console.log("deconstructMap retorna: "+ deconstructMap(items, double))
-console.log("el metodo map aplicado a items retorna: "+ items.map(double))
+//console.log("deconstructMap retorna: "+ deconstructMap(items, double))
+//console.log("el metodo map aplicado a items retorna: "+ items.map(double))
 
 //////////////FILTER//////////////////
-console.log("deconstructFilter retorna: "+ deconstructFilter(items, isEven))
-console.log("el metodo map aplicado a items retorna: "+ items.filter(isEven))
+//console.log("deconstructFilter retorna un array: "+ deconstructFilter(items, isEven))
+//console.log("el metodo map aplicado a items retorna: "+ items.filter(isEven))

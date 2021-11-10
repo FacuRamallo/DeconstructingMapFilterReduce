@@ -20,25 +20,25 @@ export function deconstructedReduce(items)
     return acc;
 }
 
-export function deconstructedReduceRefactor1(items)
+export function deconstructedReduceRefactor1(items, reducer)
 {
     let acc = 0;
     for (let i = 0; i < items.length; i++) 
     {
     const cur = items[i];
-    acc = reducer(acc,cur);
+    acc = reducer(acc,cur); 
     }
     return acc;
 }
 
 
-export function deconstructedReduceRefactor2(items, funcion, initialValue ) 
+export function deconstructedReduceRefactor2(items, reducer, initialValue ) 
 {
     let acc = initialValue;
     for (let i = 0; i < items.length; i++) 
     {
     const cur = items[i];
-    acc = funcion(acc,cur);
+    acc = reducer(acc,cur);
     }
     return acc;
 }
